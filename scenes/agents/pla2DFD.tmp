@@ -1,0 +1,1089 @@
+[gd_scene load_steps=24 format=3 uid="uid://dmqje5fcagmxu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nyjfv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6lnjc"]
+margin = 1.0
+radius = 0.531415
+height = 1.06283
+
+[sub_resource type="Animation" id="Animation_ompfv"]
+length = 0.5332
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(3, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.797615), Vector3(0, 0, 1.59523), Vector3(0, 0, 2.39285), Vector3(0, 0, -3.09272), Vector3(0, 0, -2.29511), Vector3(0, 0, -1.49749), Vector3(0, 0, -0.699877)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0), Vector3(-0.555525, 0.245241, 0), Vector3(-0.696506, -0.228052, 0), Vector3(-0.474964, -0.640924, 0), Vector3(0.00839919, -0.7668, 0), Vector3(0.453504, -0.519519, 0), Vector3(0.558598, -0.0373233, 0), Vector3(0.280408, 0.413963, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_cso7y"]
+resource_name = "fall"
+length = 0.24
+step = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 5), Vector2i(1, 5), Vector2i(2, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_olq27"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0), Vector2i(7, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_crmxq"]
+resource_name = "ide_collide"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 19), Vector2i(1, 19), Vector2i(2, 19), Vector2i(3, 19), Vector2i(4, 19), Vector2i(5, 19), Vector2i(6, 19), Vector2i(7, 19)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_nrphd"]
+resource_name = "jump"
+length = 0.24
+step = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0769231, 0.153846),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 4), Vector2i(1, 4), Vector2i(2, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_qjjjs"]
+resource_name = "land"
+length = 0.32
+step = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0769231, 0.153846, 0.230769),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 7), Vector2i(1, 7), Vector2i(2, 7), Vector2i(3, 7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_oflfr"]
+resource_name = "move"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 2), Vector2i(1, 2), Vector2i(2, 2), Vector2i(3, 2), Vector2i(4, 2), Vector2i(5, 2), Vector2i(6, 2), Vector2i(7, 2), Vector2i(8, 2), Vector2i(9, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_dg7tg"]
+resource_name = "run_after_land"
+length = 0.4
+step = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.32),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 3), Vector2i(1, 3), Vector2i(2, 3), Vector2i(3, 3), Vector2i(4, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_fyx6a"]
+resource_name = "move_colliding"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 18), Vector2i(1, 18), Vector2i(2, 18), Vector2i(3, 18), Vector2i(4, 18), Vector2i(5, 18), Vector2i(6, 18), Vector2i(7, 18), Vector2i(8, 18), Vector2i(9, 18)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_64c7r"]
+resource_name = "shield"
+length = 0.001
+step = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(3, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_tkda0"]
+resource_name = "in-shield"
+length = 0.45
+step = 0.075
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0769231, 0.152644, 0.230769, 0.307692, 0.384615),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 8), Vector2i(1, 8), Vector2i(2, 8), Vector2i(3, 8), Vector2i(4, 8), Vector2i(5, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_qbmmo"]
+resource_name = "shield_in_air"
+length = 0.16
+step = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0769231),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2i(0, 8), Vector2i(1, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.797615)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0.177391, 0.261136, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_mwwu2"]
+resource_name = "shield_land"
+length = 0.4
+step = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.227692, 0.307692),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2i(3, 8), Vector2i(4, 8), Vector2i(5, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.184684, 0), Vector3(-0.119345, 0.630998, 0), Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.08),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector3(4.5, 2.775, 4.5), Vector3(4.5, 4.5, 4.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jt73h"]
+resource_name = "out_shield"
+length = 0.3
+step = 0.075
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.075, 0.15, 0.225),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 9), Vector2i(1, 9), Vector2i(2, 9), Vector2i(3, 9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gbrhd"]
+resource_name = "shield_falling"
+length = 0.4
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(3, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector3(0, 0, -0.785398), Vector3(0, 0, -1.5708), Vector3(0, 0, -2.53073), Vector3(0, 0, -3.12938), Vector3(0, 0, 2.15723), Vector3(0, 0, 1.55858), Vector3(0, 0, 0.760964), Vector3(0, 0, -0.0366519)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector3(0.351644, 0.331795, 0), Vector3(0.561907, -0.105554, 0), Vector3(0.343233, -0.635418, 0), Vector3(-0.026831, -0.803629, 0), Vector3(-0.581927, -0.534492, 0), Vector3(-0.724906, -0.181249, 0), Vector3(-0.581926, 0.272921, 0), Vector3(-0.112094, 0.476927, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="Animation" id="Animation_6a3ts"]
+resource_name = "skid"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite_holder/Sprite3D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2i(0, 6), Vector2i(1, 6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite_holder/Sprite3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite_holder/Sprite3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-0.119345, 0.508416, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite_holder/Sprite3D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.5, 4.5, 4.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qe3gd"]
+_data = {
+"RESET": SubResource("Animation_ompfv"),
+"fall": SubResource("Animation_cso7y"),
+"idle": SubResource("Animation_olq27"),
+"idle_collide": SubResource("Animation_crmxq"),
+"jump": SubResource("Animation_nrphd"),
+"land": SubResource("Animation_qjjjs"),
+"move": SubResource("Animation_oflfr"),
+"move_after_land": SubResource("Animation_dg7tg"),
+"move_collide": SubResource("Animation_fyx6a"),
+"shield": SubResource("Animation_64c7r"),
+"shield_in": SubResource("Animation_tkda0"),
+"shield_in_air": SubResource("Animation_qbmmo"),
+"shield_land": SubResource("Animation_mwwu2"),
+"shield_out": SubResource("Animation_jt73h"),
+"shield_tumble": SubResource("Animation_gbrhd"),
+"skid": SubResource("Animation_6a3ts")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qx1s7"]
+load_path = "res://.godot/imported/jump-decal.png-c3daba5cf0b44e192ec813b9e2012e37.ctex"
+
+[sub_resource type="GDScript" id="GDScript_ccuvc"]
+script/source = "extends CharacterBody3D
+
+
+const SPEED = 5.0
+const JUMP_VELOCITY = 4.5
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var input_dir = Input.get_vector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+	move_and_slide()
+"
+
+[sub_resource type="GDScript" id="GDScript_jom7e"]
+script/source = "extends Node3D
+
+var main_sm: LimboHSM
+var player: CharacterBody3D
+
+@export var ap: AnimationPlayer
+@export var dust_effects: Node3D
+
+func _ready():
+	player = get_parent()	
+	initiate_state_machine()
+
+func initiate_state_machine():
+	main_sm = LimboHSM.new()
+
+	# Dictionary to store state instances
+	var states = {}
+	
+	# Define a dictionary with state names and their paths
+	var state_paths = {
+		\"idle_state\": \"res://scripts/state_machine/states/idle_state.gd\",
+		\"move_state\": \"res://scripts/state_machine/states/move_state.gd\",
+		\"skid_state\": \"res://scripts/state_machine/states/skid_state.gd\",
+		\"jump_state\": \"res://scripts/state_machine/states/jump_state.gd\",
+		\"fall_state\": \"res://scripts/state_machine/states/fall_state.gd\",
+		\"land_state\": \"res://scripts/state_machine/states/land_state.gd\",
+		\"move_after_land_state\": \"res://scripts/state_machine/states/move_after_land_state.gd\",
+		\"shield_in_state\": \"res://scripts/state_machine/states/shield_in_state.gd\",
+		\"shield_out_state\": \"res://scripts/state_machine/states/shield_out_state.gd\",
+		\"shield_in_air_state\": \"res://scripts/state_machine/states/shield_in_air_state.gd\",
+		\"shield_tumble_state\": \"res://scripts/state_machine/states/shield_tumble_state.gd\",
+		\"shield_land_state\": \"res://scripts/state_machine/states/shield_land_state.gd\",
+		\"move_collide_state\": \"res://scripts/state_machine/states/move_collide_state.gd\"
+	}
+	
+	# Instantiate and set up each state dynamically
+	for state_name in state_paths.keys():
+		var state_instance = load(state_paths[state_name]).new()
+		state_instance.state_machine = self
+		state_instance.player = player
+		main_sm.add_child(state_instance)
+		
+		# Store the instance in the dictionary
+		states[state_name] = state_instance
+	
+	# Set the initial state (assuming it's the idle state)
+	main_sm.initial_state = main_sm.get_child(0)  # Sets the first added child as the initial state
+	
+	handle_transitions(states) #handle transitions
+	
+	# Initialize and activate the state machine
+	main_sm.initialize(self)
+	main_sm.set_active(true)
+
+	# Add the state machine to the player
+	add_child(main_sm)
+
+func handle_transitions(states):
+	main_sm.add_transition(states[\"idle_state\"], states[\"move_state\"], &\"to_move\")
+	main_sm.add_transition(states[\"idle_state\"], states[\"move_collide_state\"], &\"to_move_collide\")
+	main_sm.add_transition(states[\"idle_state\"], states[\"jump_state\"], &\"to_jump\")
+	main_sm.add_transition(states[\"idle_state\"], states[\"shield_in_state\"], &\"to_shield_in\")
+
+	main_sm.add_transition(states[\"move_state\"], states[\"idle_state\"], &\"to_idle\")
+	main_sm.add_transition(states[\"move_state\"], states[\"skid_state\"], &\"to_skid\")
+	main_sm.add_transition(states[\"move_state\"], states[\"jump_state\"], &\"to_jump\")
+	main_sm.add_transition(states[\"move_state\"], states[\"fall_state\"], &\"to_fall\")
+	main_sm.add_transition(states[\"move_state\"], states[\"shield_in_state\"], &\"to_shield_in\")
+	main_sm.add_transition(states[\"move_state\"], states[\"move_collide_state\"], &\"to_move_collide\")
+	
+	main_sm.add_transition(states[\"move_collide_state\"], states[\"idle_state\"], &\"to_idle\")
+	main_sm.add_transition(states[\"move_collide_state\"], states[\"skid_state\"], &\"to_skid\")
+	main_sm.add_transition(states[\"move_collide_state\"], states[\"jump_state\"], &\"to_jump\")
+	main_sm.add_transition(states[\"move_collide_state\"], states[\"fall_state\"], &\"to_fall\")
+	main_sm.add_transition(states[\"move_collide_state\"], states[\"shield_in_state\"], &\"to_shield_in\")
+	main_sm.add_transition(states[\"move_collide_state\"], states[\"move_state\"], &\"to_move\")
+	
+	main_sm.add_transition(states[\"skid_state\"], states[\"idle_state\"], &\"to_idle\")
+	main_sm.add_transition(states[\"skid_state\"], states[\"move_state\"], &\"to_move\")
+	main_sm.add_transition(states[\"skid_state\"], states[\"jump_state\"], &\"to_jump\")
+	main_sm.add_transition(states[\"skid_state\"], states[\"fall_state\"], &\"to_fall\")
+	main_sm.add_transition(states[\"skid_state\"], states[\"shield_in_state\"], &\"to_shield_in\")
+
+	main_sm.add_transition(states[\"jump_state\"], states[\"fall_state\"], &\"to_fall\")
+	main_sm.add_transition(states[\"jump_state\"], states[\"shield_in_air_state\"], &\"to_shield_in_air\")
+
+	main_sm.add_transition(states[\"fall_state\"], states[\"idle_state\"], &\"to_idle\")
+	main_sm.add_transition(states[\"fall_state\"], states[\"land_state\"], &\"to_land\")
+	main_sm.add_transition(states[\"fall_state\"], states[\"jump_state\"], &\"to_jump\")
+	main_sm.add_transition(states[\"fall_state\"], states[\"move_after_land_state\"], &\"to_move_after_land\")
+	main_sm.add_transition(states[\"fall_state\"], states[\"shield_in_air_state\"], &\"to_shield_in_air\")
+	
+	main_sm.add_transition(states[\"land_state\"], states[\"idle_state\"], &\"to_idle\")
+	main_sm.add_transition(states[\"land_state\"], states[\"move_state\"], &\"to_move\")
+	main_sm.add_transition(states[\"land_state\"], states[\"jump_state\"], &\"to_jump\")
+	main_sm.add_transition(states[\"land_state\"], states[\"skid_state\"], &\"to_skid\")
+	main_sm.add_transition(states[\"land_state\"], states[\"shield_out_state\"], &\"to_shield_out\")
+	
+	
+	main_sm.add_transition(states[\"move_after_land_state\"], states[\"move_state\"], &\"to_move\")
+	main_sm.add_transition(states[\"move_after_land_state\"], states[\"jump_state\"], &\"to_jump\")
+	main_sm.add_transition(states[\"move_after_land_state\"], states[\"shield_in_state\"], &\"to_shield_in\")
+	main_sm.add_transition(states[\"move_after_land_state\"], states[\"skid_state\"], &\"to_skid\")
+	
+	
+	main_sm.add_transition(states[\"shield_in_state\"], states[\"shield_out_state\"], &\"to_shield_out\")
+	main_sm.add_transition(states[\"shield_in_state\"], states[\"shield_tumble_state\"], &\"to_shield_tumble\")
+	
+	main_sm.add_transition(states[\"shield_out_state\"], states[\"idle_state\"], &\"to_idle\")
+	main_sm.add_transition(states[\"shield_out_state\"], states[\"fall_state\"], &\"to_fall\")	
+	main_sm.add_transition(states[\"shield_out_state\"], states[\"skid_state\"], &\"to_skid\")	
+	main_sm.add_transition(states[\"shield_out_state\"], states[\"land_state\"], &\"to_land\")	
+	main_sm.add_transition(states[\"shield_out_state\"], states[\"move_after_land_state\"], &\"to_move_after_land\")	
+	
+	main_sm.add_transition(states[\"shield_in_air_state\"], states[\"shield_tumble_state\"], &\"to_shield_tumble\")
+	
+	main_sm.add_transition(states[\"shield_tumble_state\"], states[\"shield_out_state\"], &\"to_shield_out\")
+	main_sm.add_transition(states[\"shield_tumble_state\"], states[\"shield_land_state\"], &\"to_shield_land\")
+	
+	main_sm.add_transition(states[\"shield_land_state\"], states[\"shield_out_state\"], &\"to_shield_out\")
+	main_sm.add_transition(states[\"shield_land_state\"], states[\"shield_tumble_state\"], &\"to_shield_tumble\")
+"
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7f51r"]
+radius = 1.901
+height = 8.032
+
+[node name="player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="sprite_holder" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="sprite_holder"]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, -0.119345, 0.508416, 0)
+texture_filter = 2
+texture = SubResource("CompressedTexture2D_nyjfv")
+hframes = 11
+vframes = 20
+frame = 91
+metadata/_edit_group_ = true
+
+[node name="rc_wall_detection" type="RayCast3D" parent="sprite_holder"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0655032, 0.103481, 0)
+shape = SubResource("CapsuleShape3D_6lnjc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qe3gd")
+}
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.93589, 0)
+size = Vector3(0.75, 4.791, 0.75)
+texture_albedo = SubResource("CompressedTexture2D_qx1s7")
+albedo_mix = 0.38
+
+[node name="dust_effects" type="Node3D" parent="."]
+script = SubResource("GDScript_ccuvc")
+
+[node name="state_machine" type="Node3D" parent="." node_paths=PackedStringArray("ap", "dust_effects")]
+script = SubResource("GDScript_jom7e")
+ap = NodePath("../AnimationPlayer")
+dust_effects = NodePath("../dust_effects")
+
+[node name="left_feet_marker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.771, -0.239027, 0.00918967)
+
+[node name="right_feet_marker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.483, -0.239027, 0.00918967)
+
+[node name="bottom_marker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0821898, -0.354702, 0)
+
+[node name="camera_controller" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+top_level = true
+
+[node name="camera_target" type="Node3D" parent="camera_controller"]
+transform = Transform3D(1, 0, 0, 0, 0.948495, 0.316792, 0, -0.316792, 0.948495, 0, 1.05385, 4.05624)
+
+[node name="Camera3D" type="Camera3D" parent="camera_controller/camera_target"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0700453, 0.292844, 0)
+mesh = SubResource("CapsuleMesh_7f51r")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="state_machine" method="_on_ap_animation_finished"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmqje5fcagmxu"]
+
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_xs4oi"]
+[ext_resource type="Texture2D" uid="uid://cerue5egxxsrl" path="res://assets/textures/agents/player/jump-decal.png" id="3_34kcm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6lnjc"]
+margin = 1.0
+radius = 0.531415
+height = 1.06283
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7f51r"]
+height = 1.5
+
+[node name="player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_xs4oi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_6lnjc")
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.93589, 0)
+size = Vector3(0.75, 4.791, 0.75)
+texture_albedo = ExtResource("3_34kcm")
+albedo_mix = 0.38
+
+[node name="camera_controller" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+top_level = true
+
+[node name="camera_target" type="Node3D" parent="camera_controller"]
+transform = Transform3D(1, 0, 0, 0, 0.948495, 0.316792, 0, -0.316792, 0.948495, 0, 1.05385, 4.05624)
+
+[node name="Camera3D" type="Camera3D" parent="camera_controller/camera_target"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.227081, 0)
+mesh = SubResource("CapsuleMesh_7f51r")
